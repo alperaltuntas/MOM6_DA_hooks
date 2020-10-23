@@ -56,7 +56,7 @@ module ocean_da_types_mod
 
   type, public :: ocean_profile_type
      integer :: variable !< variable ids are defined by the ocean_types module (e.g. TEMP_ID, SALT_ID)
-     integer :: inst_type !< instrument types are defined by platform class (e.g. MOORING, DROP, etc.) and instrument type (XBT, CDT, etc.)
+     integer :: inst_type !< instrument types are defined by platform class (e.g. MOORING, DROP, etc.) and instrument type
      integer :: nvar !< number of observations types associated with the current profile
      real    :: project !< e.g. FGGE, COARE, ACCE, ...
      real    :: probe !< MBT, XBT, drifting buoy
@@ -96,7 +96,7 @@ module ocean_da_types_mod
      type(time_type) :: time
      integer         :: yyyy
      integer         :: mmdd
-     !type(time_type), pointer :: Model_time ! each profile can be associated with a first-guess field with an associated time and grid
+     !type(time_type), pointer :: Model_time
      !type(grid_type), pointer :: Model_grid
      real :: i_index, j_index ! model longitude and latitude indices respectively
      real, dimension(:), pointer :: k_index ! model depth indices

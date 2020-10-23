@@ -16,7 +16,7 @@ module write_ocean_obs_mod
       mpp_write_meta, mpp_write, mpp_close
  use mpp_mod, only : mpp_error, FATAL
  use ocean_da_types_mod, only : ocean_profile_type
- use time_manager_mod, only : time_type, get_time, set_date, operator ( - )
+ use time_manager_mod!, only : time_type, get_time, set_date, operator ( - )
 
  implicit none
 
